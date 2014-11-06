@@ -31,7 +31,7 @@ function toTargetIp(ip) {
     ifaces[dev].reduce(addIfExternal, addresses);
   });
 
-  return addresses[0];
+  return addresses[0] || '127.0.0.1';
 }
 
 module.exports = toTargetIp;
